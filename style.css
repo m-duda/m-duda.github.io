@@ -1,0 +1,327 @@
+/*
+1. Reset
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*-----------Wyczyszczenie stylów---------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*-----------------Globalne ustawienia dla strony--------------*/
+html {
+    height: 100%;
+}
+body {
+    background-color: #fcfff9;
+    font-family: 'Zilla Slab', serif;
+    color: #63b1d1;
+}
+/*-----------------Ustawienia nagłówka globalne----------------*/
+header{
+    text-align: center;
+}
+
+nav {
+    background-color: #01020c;
+}
+/*-----------------Ustawienia nagłówka wersja ekran mały-------*/
+nav li {
+    padding: 20px 0;
+}
+
+nav a {
+    font-size: 20px;
+    color: #63b1d1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/*-----------------Ustawienia nagłówka wersja ekran duży-------*/
+@media screen and (min-width: 1024px) {
+    nav {
+        position: fixed;
+        right: 0;
+        left: 0;
+    }
+    nav li {
+        display: inline-block;
+        padding: 30px 4%;
+    }
+    nav a {
+        font-size: 24px;
+    }
+    .image_nav_bar {
+        padding: 220px 0;
+        background: url("images/Backlit_keyboard.jpg") 0 0;
+        background-size: cover;
+        right: 0;
+        left: 0;
+        position: fixed; z-index: -1;
+    }
+}
+/*-----------Ustawienia ogólne sekcji głównej strony------------*/
+main{
+    padding: 30px 0 0;
+    text-align: center;
+
+}
+
+h1 {
+    background-color: #fcfff9;
+    padding: 20px 5%;
+    font-size: 32px;
+}
+
+p {
+    background-color: #fcfff9;
+    padding: 0 10%;
+}
+
+@media screen and (min-width: 1024px) {
+    main{
+        padding: 100px 0 0;
+    }
+    h1 {
+        padding: 30px 10%;
+        font-size: 48px;
+    }
+}
+/*-------Ustawienia szczegółowe sekcji głównej strony main-------*/
+
+@media screen and (min-width: 1024px) {
+    .main_glowna{
+        padding: 440px 0 0;
+    }
+}
+.akapit_pierwszy {
+    background-color: #fcfff9;
+    padding: 30px 10% ;
+}
+
+.akapit_pierwszy p {
+    text-align: justify;
+    font-size: 20px;
+    padding: 0 10% 30px;
+}
+
+.akapit_pierwszy img {
+    width: 200px;
+}
+
+.akapit_drugi {
+    background-color: #fcfff9;
+    padding: 30px 10% ;
+}
+.akapit_drugi p {
+    text-align: justify;
+    font-size: 20px;
+    padding: 0 10% 30px;
+}
+@media screen and (max-width: 1024px) {
+    .akapit_drugi img {
+        display: none;
+    }
+}
+
+.akapit {
+    background-color: #fcfff9;
+    padding: 30px 10% 0;
+    text-align: justify;
+    text-align-last: center;
+    font-size: 20px;
+}
+
+.logo_java_kolo {
+    margin: 0 auto;
+    padding: 50px 15%;
+    width: 70%;
+    background-color: #fcfff9;
+}
+
+@media screen and (min-width: 1024px) {
+    .akapit_pierwszy {
+        display: flex;
+        padding: 30px 0 30px 2%;
+    }
+    .akapit_pierwszy p {
+        width: 45%;
+        font-size: 32px;
+    }
+    .akapit_pierwszy img {
+        width: 20%;
+        height: 20%;
+    }
+    .akapit_drugi {
+        display: flex;
+        padding: 30px 0 30px 10%;
+    }
+    .akapit_drugi p {
+        width: 45%;
+        font-size: 32px;
+    }
+    .akapit_drugi a {
+        width: 30%;
+    }
+    .akapit_drugi img {
+        width: 100%;
+    }
+    .akapit {
+        padding: 30px 5% 0;
+        font-size: 32px;
+    }
+}
+/*-Ustawienia szczegółowe sekcji głównej strony technologie i rozwój-*/
+
+.main_technologie img{
+    margin: 50px auto;
+    height: 150px;
+    padding: 10px 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main_technologie img {
+        height: 200px;
+        padding: 5px 50px;
+    }
+}
+/*-------Ustawienia szczegółowe sekcji głównej strony kontakt------*/
+
+
+.section-map {
+    padding: 50px 15%;
+}
+@media screen and (max-width: 1024px) {
+    .section-map {
+        display: none;
+    }
+}
+
+h2 {
+    color: #63b1d1;
+    padding: 50px 15% 100px;
+    font-size: 28px;
+    line-height: 1.5;
+}
+/*
+.section-contact-form-inner {
+    padding: 18px 0 24px;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px dashed #A7A79B;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form-inner {
+        padding: 18px 0 70px;
+    }
+}
+
+.section-contact-form input,
+.section-contact-form textarea {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 auto 12px;
+    border: 1px solid #D2CFC6;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form input,
+    .section-contact-form textarea {
+        width: 70%;
+    }
+}
+
+.section-contact-form input {
+    height: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form input {
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+.section-contact-form textarea {
+    height: 180px;
+    padding: 10px 0 0;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form textarea {
+        height: 300px;
+    }
+}
+
+.section-contact-form button {
+    padding: 10px 42px;
+    background-color: #01020c;
+    color: #63b1d1;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    margin: 25px 0 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form button {
+        padding: 22px 80px;
+        font-size: 24px;
+        margin: 40px 0 0;
+    }
+}
+*/
+/*-------Ustawienia ogólne sekcji footer--------------------------*/
+footer {
+    background-color: #01020c;
+    text-align: center;
+    padding: 20px 10%;
+    font-size: 18px;
+}
